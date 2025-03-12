@@ -15,9 +15,11 @@ const ClientesTable = () => {
         <MDBTableHead>
           <tr>
             <th scope="col">Nome</th>
-            <th scope="col">CPF</th>
-            <th scope="col">E-mail</th>
-            <th scope="col">Endereço</th>
+            <th scope="col">UF</th>
+            <th scope="col">Cidade</th>
+            <th scope="col">Macrorregião</th>
+            <th scope="col">Microrregião</th>
+            <th scope="col">Maticula</th>
             <th scope="col">Opção</th>
           </tr>
         </MDBTableHead>
@@ -26,9 +28,11 @@ const ClientesTable = () => {
             return (
               <tr key={i}>
                 <td>{cliente.nome}</td>
-                <td>{cliente.cpf}</td>
-                <td>{cliente.email}</td>
-                <td>{cliente.endereco}</td>
+                <td>{cliente.uf}</td>
+                <td>{cliente.cidade}</td>
+                <td>{cliente.macrorregiao}</td>
+                <td>{cliente.microrregiao}</td>
+                <td>{cliente.matricula}</td>
                 <td>
                   <MDBBtn floating tag="a" className="mx-2">
                     <MDBIcon fas icon="pen" />
