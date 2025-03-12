@@ -17,7 +17,7 @@ const Propriedades = () => {
 
   return (
     <>
-      <div>Propriedades</div>
+      <div>Instituições</div>
 
       <div>
         <Row>
@@ -28,7 +28,7 @@ const Propriedades = () => {
             <MDBTooltip
               tag="span"
               wrapperClass="d-inline-block"
-              title="Adicionar Propriedade"
+              title="Adicionar Instituições"
             >
               <Button onClick={handleShow}>+</Button>
             </MDBTooltip>
@@ -54,7 +54,7 @@ const Propriedades = () => {
               <Form.Label>Nome</Form.Label>
               <Form.Control
                 type="text"
-                placeholder="Sítio Aruara"
+                placeholder=""
                 id="nome"
                 name="nome"
                 value={nome}
@@ -63,8 +63,8 @@ const Propriedades = () => {
             </Form.Group>
 
             <Form.Group className="mb-3">
-              <Form.Label>Estado</Form.Label>
-              <Form.Control type="text" id="estado" name="estado" />
+              <Form.Label>UF</Form.Label>
+              <Form.Control type="text" id="uf" name="uf" />
             </Form.Group>
 
             <Form.Group className="mb-3">
@@ -73,24 +73,26 @@ const Propriedades = () => {
             </Form.Group>
 
             <Form.Group className="mb-3">
-              <Form.Label>Latitude</Form.Label>
-              <Form.Control
-                type="text"
-                placeholder="12345.6789"
-                id="latitude"
-                name="latitude"
-              />
+              <Form.Label>Macrorregião</Form.Label>
+              <Form.Control type="text" id="macrorregiao" name="macrorregiao" />
             </Form.Group>
 
             <Form.Group className="mb-3">
-              <Form.Label>Longitude</Form.Label>
+              <Form.Label>Microrregião</Form.Label>
+              <Form.Control type="text" id="microrregiao" name="microrregiao" />
+            </Form.Group>
+
+            <Form.Group className="mb-3">
+              <Form.Label>Matricula</Form.Label>
               <Form.Control
                 type="text"
-                placeholder="12345.6789"
-                id="longitude"
-                name="longitude"
+                placeholder="123456789"
+                id="matricula"
+                name="matricula"
               />
             </Form.Group>
+
+            
           </Form>
         </Modal.Body>
         <Modal.Footer>
