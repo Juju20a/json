@@ -2,7 +2,8 @@ let clientes = [
   {
     nome: 'Maria',
     matricula: '00011122233',
-    UF: 'PB',
+    uf: 'PB',
+    cidade: "Guarabira",
     macrorregiao: 'Paraíba',
     microrregiao: 'Guarabira',
     instituicao: 'IFPB',
@@ -10,7 +11,8 @@ let clientes = [
   {
     nome: 'Pedro',
     matricula: '00011122233',
-    UF: 'PB',
+    uf: 'PB',
+    cidade: "Guarabira",
     macrorregiao: 'Paraíba',
     microrregiao: 'Guarabira',
     instituicao: 'IFPB',
@@ -18,7 +20,8 @@ let clientes = [
   {
     nome: 'Fernando',
     matricula: '00011122233',
-    UF: 'PB',
+    uf: 'PB',
+    cidade: "Guarabira",
     macrorregiao: 'Paraíba',
     microrregiao: 'Guarabira',
     instituicao: 'IFPB',
@@ -26,7 +29,8 @@ let clientes = [
   {
     nome: 'José',
     matricula: '00011122233',
-    UF: 'PB',
+    uf: 'PB',
+    cidade: "Guarabira",
     macrorregiao: 'Paraíba',
     microrregiao: 'Guarabira',
     instituicao: 'IFPB',
@@ -34,7 +38,8 @@ let clientes = [
   {
     nome: 'Caio',
     matricula: '00011122233',
-    UF: 'PB',
+    uf: 'PB',
+    cidade: "Guarabira",
     macrorregiao: 'Paraíba',
     microrregiao: 'Guarabira',
     instituicao: 'IFPB',
@@ -42,7 +47,8 @@ let clientes = [
   {
     nome: 'Joaquim',
     matricula: '00011122233',
-    UF: 'PB',
+    uf: 'PB',
+    cidade: "Guarabira",
     macrorregiao: 'Paraíba',
     microrregiao: 'Guarabira',
     instituicao: 'IFPB',
@@ -50,7 +56,8 @@ let clientes = [
   {
     nome: 'Paulo',
     matricula: '00011122233',
-    UF: 'PB',
+    uf: 'PB',
+    cidade: "Guarabira",
     macrorregiao: 'Paraíba',
     microrregiao: 'Guarabira',
     instituicao: 'IFPB',
@@ -58,7 +65,8 @@ let clientes = [
   {
     nome: 'Gabriel',
     matricula: '00011122233',
-    UF: 'PB',
+    uf: 'PB',
+    cidade: "Guarabira",
     macrorregiao: 'Paraíba',
     microrregiao: 'Guarabira',
     instituicao: 'IFPB',
@@ -66,7 +74,8 @@ let clientes = [
   {
     nome: 'João Guilherme',
     matricula: '00011122233',
-    UF: 'PB',
+    uf: 'PB',
+    cidade: "Guarabira",
     macrorregiao: 'Paraíba',
     microrregiao: 'Guarabira',
     instituicao: 'IFPB',
@@ -74,7 +83,8 @@ let clientes = [
   {
     nome: 'Henrrique',
     matricula: '00011122233',
-    UF: 'PB',
+    uf: 'PB',
+    cidade: "Guarabira",
     macrorregiao: 'Paraíba',
     microrregiao: 'Guarabira',
     instituicao: 'IFPB',
