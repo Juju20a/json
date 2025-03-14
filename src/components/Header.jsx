@@ -18,7 +18,7 @@ const Header = () => {
     <header>
       <MDBNavbar expand="lg" light bgColor="light">
         <MDBContainer fluid>
-          <MDBNavbarBrand href="#">Navbar</MDBNavbarBrand>
+          <MDBNavbarBrand href="#">Instituições</MDBNavbarBrand>
           <MDBNavbarToggler
             type="button"
             aria-expanded="false"
