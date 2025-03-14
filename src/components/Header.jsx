@@ -18,7 +18,7 @@ const Header = () => {
     <header>
       <MDBNavbar expand="lg" light bgColor="light">
         <MDBContainer fluid>
-          <MDBNavbarBrand href="#">Instituições</MDBNavbarBrand>
+          <MDBNavbarBrand href="#">Educa Brasil</MDBNavbarBrand>
           <MDBNavbarToggler
             type="button"
             aria-expanded="false"
@@ -33,7 +33,7 @@ const Header = () => {
                 <MDBNavbarLink href="/">Home</MDBNavbarLink>
               </MDBNavbarItem>
               <MDBNavbarItem>
-                <MDBNavbarLink href="/propriedades">Propriedades</MDBNavbarLink>
+                <MDBNavbarLink href="/propriedades">Instituições</MDBNavbarLink>
               </MDBNavbarItem>
               <MDBNavbarItem>
                 <MDBNavbarLink href="/sobre">Sobre</MDBNavbarLink>
