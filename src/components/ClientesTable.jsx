@@ -65,7 +65,7 @@ const ClientesTable = () => {
       setClientesData([...clientesData, novoCliente]);
       toast.success("Cliente adicionado com sucesso!"); 
     }
-    setShowModal(false); /
+    setShowModal(false); 
     setClienteEditando(null); 
   };
 
