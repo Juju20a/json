@@ -9,8 +9,10 @@ import {
 import { Formik, Field, Form, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import clientes from '../datasets/clientes';
+import { Modal } from 'react-bootstrap'; 
+import { toast, ToastContainer } from 'react-toastify'; s
+import 'react-toastify/dist/ReactToastify.css'; 
 
-// Esquema de validação com Yup
 const validationSchema = Yup.object({
   nome: Yup.string()
     .min(2, 'O nome deve ter pelo menos 2 caracteres')
@@ -34,29 +36,37 @@ const validationSchema = Yup.object({
 
 const ClientesTable = () => {
   const [clientesData, setClientesData] = useState([...clientes]);
-  const [clienteEditando, setClienteEditando] = useState(null);
+  const [clienteEditando, setClienteEditando] = useState(null); 
   const [showModal, setShowModal] = useState(false);
+
   
   const handleEditarCliente = (cliente) => {
     setClienteEditando(cliente);
     setShowModal(true);
   };
 
+  
   const handleExcluirCliente = (id) => {
-    setClientesData(clientesData.filter(cliente => cliente.id !== id));
+    setClientesData(clientesData.filter(cliente => cliente.id !== id)); 
+    toast.success("Cliente excluído com sucesso!");
   };
 
+ 
   const handleSalvarCliente = (values) => {
     if (clienteEditando) {
-      setClientesData(clientesData.map(cliente => 
+     
+      setClientesData(clientesData.map(cliente =>
         cliente.id === clienteEditando.id ? { ...cliente, ...values } : cliente
       ));
+      toast.success("Cliente editado com sucesso!"); 
     } else {
-      const novoCliente = { id: Date.now(), ...values }; // Gera um id único
+      // Adicionar novo cliente
+      const novoCliente = { id: Date.now(), ...values }; 
       setClientesData([...clientesData, novoCliente]);
+      toast.success("Cliente adicionado com sucesso!"); 
     }
-    setShowModal(false); // Fechar o modal após salvar
-    setClienteEditando(null); // Resetar o estado de edição
+    setShowModal(false); /
+    setClienteEditando(null); 
   };
 
   return (
@@ -71,7 +81,7 @@ const ClientesTable = () => {
             <th scope="col">Cidade</th>
             <th scope="col">Macrorregião</th>
             <th scope="col">Microrregião</th>
-            <th scope="col">Opção</th>
+            <th scope="col">Opções</th>
           </tr>
         </MDBTableHead>
         <MDBTableBody>
@@ -98,9 +108,12 @@ const ClientesTable = () => {
         </MDBTableBody>
       </MDBTable>
 
-      {showModal && (
-        <div className="mt-4">
-          <h4>{clienteEditando ? 'Editar Cliente' : 'Adicionar Cliente'}</h4>
+      {/* Modal */}
+      <Modal show={showModal} onHide={() => setShowModal(false)} centered>
+        <Modal.Header closeButton>
+          <Modal.Title>{clienteEditando ? 'Editar Cliente' : 'Adicionar Cliente'}</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
           <Formik
             initialValues={{
               nome: clienteEditando ? clienteEditando.nome : '',
@@ -162,8 +175,11 @@ const ClientesTable = () => {
               </MDBBtn>
             </Form>
           </Formik>
-        </div>
-      )}
+        </Modal.Body>
+      </Modal>
+
+      {/* Toast Container for success messages */}
+      <ToastContainer position="top-right" autoClose={5000} hideProgressBar newestOnTop closeButton />
     </>
   );
 };
