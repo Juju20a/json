@@ -1,47 +1,24 @@
-import {
-  MDBCollapse,
-  MDBContainer,
-  MDBIcon,
-  MDBNavbar,
-  MDBNavbarBrand,
-  MDBNavbarItem,
-  MDBNavbarLink,
-  MDBNavbarNav,
-  MDBNavbarToggler,
-} from 'mdb-react-ui-kit';
 import { useState } from 'react';
+import { Navbar, Nav, Container } from 'react-bootstrap';
 
 const Header = () => {
-  const [openNav, setOpenNav] = useState(false);
+  const [expanded, setExpanded] = useState(false);
 
   return (
     <header>
-      <MDBNavbar expand="lg" light bgColor="light">
-        <MDBContainer fluid>
-          <MDBNavbarBrand href="#">Educa Brasil</MDBNavbarBrand>
-          <MDBNavbarToggler
-            type="button"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-            onClick={() => setOpenNav(!openNav)}
-          >
-            <MDBIcon icon="bars" fas />
-          </MDBNavbarToggler>
-          <MDBCollapse navbar open={openNav}>
-            <MDBNavbarNav>
-              <MDBNavbarItem>
-                <MDBNavbarLink href="/">Home</MDBNavbarLink>
-              </MDBNavbarItem>
-              <MDBNavbarItem>
-                <MDBNavbarLink href="/propriedades">Instituições</MDBNavbarLink>
-              </MDBNavbarItem>
-              <MDBNavbarItem>
-                <MDBNavbarLink href="/sobre">Sobre</MDBNavbarLink>
-              </MDBNavbarItem>
-            </MDBNavbarNav>
-          </MDBCollapse>
-        </MDBContainer>
-      </MDBNavbar>
+      <Navbar expand="lg" bg="light" variant="light" expanded={expanded}>
+        <Container fluid>
+          <Navbar.Brand href="/">Educa Brasil</Navbar.Brand>
+          <Navbar.Toggle onClick={() => setExpanded(!expanded)} />
+          <Navbar.Collapse>
+            <Nav className="me-auto">
+              <Nav.Link href="/" onClick={() => setExpanded(false)}>Home</Nav.Link>
+              <Nav.Link href="/propriedades" onClick={() => setExpanded(false)}>Instituições de Ensino</Nav.Link>
+              <Nav.Link href="/sobre" onClick={() => setExpanded(false)}>Sobre</Nav.Link>
+            </Nav>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
     </header>
   );
 };
