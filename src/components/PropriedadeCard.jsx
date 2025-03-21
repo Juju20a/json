@@ -1,9 +1,9 @@
-import { Button, Card, Col } from 'react-bootstrap';
+import { Card, Col, Button } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 
 const PropriedadeCard = ({ imagem, nome, descricao }) => {
-  const detalharHandleClick = (event) => {
-    console.log('Clicou');
+  const detalharHandleClick = () => {
+    console.log(`Clicou em ${nome}`);
   };
 
   return (
