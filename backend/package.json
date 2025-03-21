@@ -1,0 +1,11 @@
+
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node json-server.js"
+  },
+  "dependencies": {
+    "json-server": "^0.17.4"
+  }
+}
